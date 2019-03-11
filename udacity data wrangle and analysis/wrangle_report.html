@@ -11814,15 +11814,16 @@ Third data was extracted from Twitter API using Python's tweepy library. Data wa
 <div class="text_cell_render border-box-sizing rendered_html">
 <blockquote><p>I mainly used Pandas .info(), .value_counts(), and other methods to assess data and check issues related to quality and tidiness. With those methods I found out such problems:</p>
 <ol>
-<li>The name column does not contain proper names.</li>
-<li>Timestamp column isn't datetime object.</li>
+<li>The name column does not contain proper names such as "a".</li>
+<li>The timestamp column should be datetime type.</li>
 <li>Some null values are not treated as null values.</li>
-<li>Numerators and denumerators have unusual values.</li>
-<li>Several columns include empty values.</li>
-<li>Images dataframe and Archive dataframe have different entries.</li>
-<li>Unnamed: 0 column in tweet dataframe is unnecessary.</li>
+<li>Some numerators and denumerators have unusual values.</li>
+<li>Several columns have empty values, like in_reply_to_status, in_reply_to_user_id, retweeted_status_id, retweeted_status_user_id, retweeted_status_timestamp.</li>
+<li>Images dataframe has 2075 entries while archive only has 2356 entries.</li>
+<li>There are retweets and tweets without images.</li>
 <li>Columns for dog breed predictions need to be reworked(condensed)</li>
 <li>The dog stages(doggo, puppo, etc.) have values as columns, instead of one column filled with their values.</li>
+<li>3 dataframes are not needed so I merged them since they are all related to one twitter account</li>
 </ol>
 </blockquote>
 
